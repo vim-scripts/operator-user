@@ -1,0 +1,40 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2692
+
+*operator-user* is a Vim library plugin to provide an easy way to define your
+own |operator|.  Though there are several pitfalls to define operators, you
+don't have to take care of them with |operator#user#define()| which are
+provided by this library plugin.
+
+For example, the following code defines operator "_" to adjust the height of
+the current window to the same as the target range:
+
+	map _  <Plug>(operator-adjust)
+	call operator#user#define('adjust', 'Op_adjust_window_height')
+	function! Op_adjust_window_height(motion_wiseness)
+	  execute (line("']") - line("'[") + 1) 'wincmd' '_'
+	  normal! `[zt
+	endfunction
+
+You can use this operator as follows:
+
+	10__	Adjust to 10 lines and show the current line at the top.
+	_ip	Adjust to the same height of the paragraph under the cursor.
+
+This operator is useful to adjust the visible content in the current window.
+
+See also |operator-user-exmaples| for more examples and explanations.
+
+
+Requirements:
+- Vim 7.2 or later
+
+Optionals:
+- |grex| (vimscript#2773)
+- |operator-replace| (vimscript#2782)
+- |wwwsearch| (vimscript#2785)
+
+Latest version:
+http://github.com/kana/vim-operator-user
+
+Document in HTML format:
+http://kana.github.com/config/vim/operator-user.html
