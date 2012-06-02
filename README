@@ -22,7 +22,7 @@ You can use this operator as follows:
 
 This operator is useful to adjust the visible content in the current window.
 
-See also |operator-user-exmaples| for more examples and explanations.
+See also |operator-user-examples| for more examples and explanations.
 
 
 Requirements:
@@ -34,7 +34,7 @@ Optionals:
 - |wwwsearch| (vimscript#2785)
 
 Latest version:
-http://github.com/kana/vim-operator-user
+http://github.com/kana/config/commits/vim-operator-user
 
 Document in HTML format:
 http://kana.github.com/config/vim/operator-user.html

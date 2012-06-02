@@ -1,0 +1,6 @@
+all_files_in_repos :=          Makefile autoload/operator/user.vim doc/operator-user.txt t/basics.vim
+current_branch := master
+origin_name := origin
+origin_uri := ../.
+repos_name := vim-operator-user
+version := 0.0.7
